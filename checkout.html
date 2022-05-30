@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <div id="order-form">
+
+      <form id="form">
+        <input type="text" id="name" placeholder="Enter name">
+        <input type="number" id="number" placeholder="enter Number" >
+        <input type="text" id="address" placeholder="Enter your city">
+        <input type="submit" value="conform" id="confirm">
+      </form>
+      <!--Add your form html element here-->
+      <!--In form, give #name,#number and #address as HTML id's to relevant input elements -->
+      <!-- confirm button with id "confirm" -->
+    </div>
+    <button id="confirm_checkout"><a href="index.html">chekkout </a></button>
+  </body>
+</html>
+<script>
+  let form=document.getElementById("form");
+form.addEventListener("submit",myfun)
+
+
+var data=[];
+function myfun()
+{
+  event.preventDefault();
+var obj={
+
+name:form.name.value,
+number:form.no.value,
+city:form.city.value,
+
+
+}
+data.push(obj);
+
+console.log(data)
+}
+</script>
